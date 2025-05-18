@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LocationWindow</class>
+ <widget class="QMainWindow" name="LocationWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1130</width>
+    <height>609</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Location Window</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../app/resources/resources.qrc">
+    <normaloff>:/images/icons/png/32x32/location.png</normaloff>:/images/icons/png/32x32/location.png</iconset>
+  </property>
+  <widget class="QWidget" name="Location">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QGroupBox" name="groupBox">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>45</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="title">
+       <string/>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QLCDNumber" name="lcd_zoom">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>110</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>91</width>
+           <height>23</height>
+          </size>
+         </property>
+         <property name="smallDecimalPoint">
+          <bool>false</bool>
+         </property>
+         <property name="digitCount">
+          <number>8</number>
+         </property>
+         <property name="segmentStyle">
+          <enum>QLCDNumber::Filled</enum>
+         </property>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignLeft">
+        <widget class="QWidget" name="widget" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>121</width>
+           <height>40</height>
+          </size>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Seze Point:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinBox_sizePoint">
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>100</number>
+            </property>
+            <property name="value">
+             <number>10</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QGroupBox" name="groupBox_image">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>Image</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <layout class="QGridLayout" name="imageLayout"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget_SeenTable">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>89</width>
+     <height>111</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>524287</width>
+     <height>524287</height>
+    </size>
+   </property>
+   <property name="windowTitle">
+    <string>Seen / NoSeen</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QGridLayout" name="gridLayout_4">
+     <item row="0" column="0">
+      <widget class="QTableWidget" name="tableWidget_SeenNoSeen"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionZoomIn"/>
+   <addaction name="actionZoomOut"/>
+   <addaction name="actionZoom_2x"/>
+   <addaction name="actionZoom_Reset"/>
+   <addaction name="separator"/>
+   <addaction name="actionPointsPanel"/>
+   <addaction name="actionSeenNoSeenPanel"/>
+   <addaction name="actionImages_List"/>
+   <addaction name="separator"/>
+   <addaction name="actionCreatPoint"/>
+   <addaction name="actionSelectPoint"/>
+   <addaction name="separator"/>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget_PointsTable">
+   <property name="minimumSize">
+    <size>
+     <width>89</width>
+     <height>111</height>
+    </size>
+   </property>
+   <property name="windowIcon">
+    <iconset>
+     <normaloff>:/images/icons/png/32x32/table.png</normaloff>:/images/icons/png/32x32/table.png</iconset>
+   </property>
+   <property name="windowTitle">
+    <string>Points</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_2">
+    <layout class="QGridLayout" name="gridLayout_3">
+     <item row="0" column="0">
+      <widget class="QTableWidget" name="tableWidget_Points">
+       <property name="selectionMode">
+        <enum>QAbstractItemView::ExtendedSelection</enum>
+       </property>
+       <property name="selectionBehavior">
+        <enum>QAbstractItemView::SelectRows</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget_ImagesList">
+   <property name="minimumSize">
+    <size>
+     <width>268</width>
+     <height>145</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>524287</width>
+     <height>524287</height>
+    </size>
+   </property>
+   <property name="windowTitle">
+    <string>Images</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_3">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="1" column="0">
+      <widget class="QListWidget" name="listWidget_Images">
+       <property name="minimumSize">
+        <size>
+         <width>250</width>
+         <height>0</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionZoomOut">
+   <property name="icon">
+    <iconset resource="../app/resources/resources.qrc">
+     <normaloff>:/images/icons/png/32x32/reduce.png</normaloff>:/images/icons/png/32x32/reduce.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom Out</string>
+   </property>
+   <property name="toolTip">
+    <string>Zoom Out - Ctrl+-</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+-, Ctrl+-</string>
+   </property>
+  </action>
+  <action name="actionZoomIn">
+   <property name="icon">
+    <iconset resource="../app/resources/resources.qrc">
+     <normaloff>:/images/icons/png/32x32/increase.png</normaloff>:/images/icons/png/32x32/increase.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom In</string>
+   </property>
+   <property name="toolTip">
+    <string>Zoom In - Ctrl++</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+=, Ctrl++</string>
+   </property>
+  </action>
+  <action name="actionSeenNoSeenPanel">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../app/resources/resources.qrc">
+     <normaloff>:/images/icons/png/32x32/comparison_chart.png</normaloff>:/images/icons/png/32x32/comparison_chart.png</iconset>
+   </property>
+   <property name="text">
+    <string>Seen Table</string>
+   </property>
+   <property name="toolTip">
+    <string>Seen Panel</string>
+   </property>
+  </action>
+  <action name="actionToolBar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>ToolBar</string>
+   </property>
+  </action>
+  <action name="actionPointsPanel">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../app/resources/resources.qrc">
+     <normaloff>:/images/icons/png/32x32/numbered list.png</normaloff>:/images/icons/png/32x32/numbered list.png</iconset>
+   </property>
+   <property name="text">
+    <string>Points Panel</string>
+   </property>
+   <property name="toolTip">
+    <string>Points Panel</string>
+   </property>
+  </action>
+  <action name="actionImages_List">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../app/resources/resources.qrc">
+     <normaloff>:/images/icons/png/32x32/two pictures.png</normaloff>:/images/icons/png/32x32/two pictures.png</iconset>
+   </property>
+   <property name="text">
+    <string>Images Panel</string>
+   </property>
+   <property name="toolTip">
+    <string>Images Panel</string>
+   </property>
+  </action>
+  <action name="actionZoom_Reset">
+   <property name="icon">
+    <iconset resource="../app/resources/resources.qrc">
+     <normaloff>:/images/icons/png/32x32/reset_zoom.png</normaloff>:/images/icons/png/32x32/reset_zoom.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom Reset</string>
+   </property>
+   <property name="toolTip">
+    <string>Zoom Reset - Esc</string>
+   </property>
+   <property name="shortcut">
+    <string>Esc</string>
+   </property>
+  </action>
+  <action name="actionZoom_2x">
+   <property name="icon">
+    <iconset resource="../app/resources/resources.qrc">
+     <normaloff>:/images/icons/png/32x32/increase_2x.png</normaloff>:/images/icons/png/32x32/increase_2x.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom 2x</string>
+   </property>
+   <property name="toolTip">
+    <string>Zoom 2x - Alt++</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+=, Alt++</string>
+   </property>
+  </action>
+  <action name="actionCreatPoint">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../app/resources/resources.qrc">
+     <normaloff>:/images/icons/png/32x32/location.png</normaloff>:/images/icons/png/32x32/location.png</iconset>
+   </property>
+   <property name="text">
+    <string>CreatPoint</string>
+   </property>
+   <property name="toolTip">
+    <string>Create Point</string>
+   </property>
+  </action>
+  <action name="actionSelectPoint">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../app/resources/resources.qrc">
+     <normaloff>:/images/icons/png/32x32/select_view.png</normaloff>:/images/icons/png/32x32/select_view.png</iconset>
+   </property>
+   <property name="text">
+    <string>SelectPoint</string>
+   </property>
+   <property name="toolTip">
+    <string>Select Point HotKey Cntrl</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../app/resources/resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,12 @@
+PyQt5
+psutil
+pandas
+tqdm
+Pillow
+pyinstaller
+pypiwin32
+pyinstaller-versionfile
+SQLAlchemy
+openpyxl
+XlsxWriter
+opencv-python

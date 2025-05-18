@@ -1,0 +1,64 @@
+<RCC>
+  <qresource prefix="images">
+    <file>icons/png/32x32/property.png</file>
+    <file>logo-npwc.png</file>
+    <file>icons/png/32x32/bulb.png</file>
+    <file>icons/png/32x32/find next.png</file>
+    <file>icons/png/32x32/attendance.png</file>
+    <file>icons/png/32x32/archive.png</file>
+    <file>icons/png/32x32/lightning.png</file>
+    <file>icons/png/32x32/open.png</file>
+    <file>icons/png/32x32/binoculars.png</file>
+    <file>icons/png/32x32/output.png</file>
+    <file>icons/png/32x32/bottom border.png</file>
+    <file>icons/png/32x32/top border.png</file>
+    <file>icons/png/32x32/database  add.png</file>
+    <file>icons/png/32x32/clipart1108996.png</file>
+    <file>icons/png/32x32/age+1.png</file>
+    <file>icons/png/32x32/broom.png</file>
+    <file>icons/png/32x32/create_album.png</file>
+    <file>icons/png/32x32/dog.png</file>
+    <file>icons/png/32x32/Panorama_icon-icons.com_54154.png</file>
+    <file>icons/png/32x32/book bookmark.png</file>
+    <file>icons/png/32x32/two-horizontal-arrows-pointing_74230.png</file>
+    <file>icons/png/32x32/diagonal-arrow_icon-icons.com_62864.png</file>
+    <file>icons/png/32x32/diagram.png</file>
+    <file>icons/png/32x32/gallery.png</file>
+    <file>icons/png/32x32/plus.png</file>
+    <file>icons/png/32x32/negotiation.png</file>
+    <file>icons/png/32x32/edit.png</file>
+    <file>icons/png/32x32/allow_list.png</file>
+    <file>icons/png/32x32/add user.png</file>
+    <file>icons/png/32x32/id.png</file>
+    <file>icons/png/32x32/hard disk.png</file>
+    <file>icons/png/32x32/numbered list.png</file>
+    <file>logo-pc.ico</file>
+    <file>icons/png/32x32/ftp.png</file>
+    <file>icons/png/32x32/calculator.png</file>
+    <file>icons/png/32x32/exit.png</file>
+    <file>icons/png/32x32/database.png</file>
+    <file>icons/png/32x32/forecasting.png</file>
+    <file>icons/png/32x32/add row.png</file>
+    <file>icons/png/32x32/anonymous.png</file>
+    <file>icons/png/32x32/back.png</file>
+    <file>icons/png/32x32/cancel.png</file>
+    <file>icons/png/32x32/check_mark.png</file>
+    <file>icons/png/32x32/comparison_chart.png</file>
+    <file>icons/png/32x32/delete.png</file>
+    <file>icons/png/32x32/increase.png</file>
+    <file>icons/png/32x32/increase_2x.png</file>
+    <file>icons/png/32x32/left.png</file>
+    <file>icons/png/32x32/location.png</file>
+    <file>icons/png/32x32/open database.png</file>
+    <file>icons/png/32x32/reduce.png</file>
+    <file>icons/png/32x32/reset_zoom.png</file>
+    <file>icons/png/32x32/right.png</file>
+    <file>icons/png/32x32/save.png</file>
+    <file>icons/png/32x32/select_view.png</file>
+    <file>icons/png/32x32/two pictures.png</file>
+    <file>icons/png/32x32/update.png</file>
+  </qresource>
+  <qresource prefix="translates">
+    <file>ru.qm</file>
+  </qresource>
+</RCC>
